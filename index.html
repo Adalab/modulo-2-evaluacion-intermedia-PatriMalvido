@@ -14,13 +14,17 @@
         <h1 class="title">Juego Piedra, papel y tijera</h1>
         <h2>Introduce aqui tu jugada:</h2>
         <form action="" class="controls">
-            <select name="play_selected" id="play_selected">
+            <select class="js_select_play" name="play_selected" id="play_selected">
                 <option value="rock">Piedra</option>
                 <option value="paper">Papel</option>
                 <option value="scissors">Tijera</option>
             </select>
-            <input class="controls_button" type="submit" value="Jugar">
-
+            <input class="play_button js_button" type="submit" value="Jugar">
+            <div>
+                <p class="js_infouser"></p>
+                <p class="js_player"></p>
+                <p class="js_computer"></p>
+            </div>
 
         </form>
 
