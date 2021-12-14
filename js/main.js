@@ -2,6 +2,7 @@
 
 //Variables globales
 let counter = 1;
+let computerSelection = "";
 const playButton = document.querySelector(".js_button");
 const selectPlay = document.querySelector(".js_select_play");
 
@@ -9,7 +10,6 @@ const infoUser = document.querySelector(".js_infouser");
 const player = document.querySelector(".js_player");
 const computer = document.querySelector(".js_computer");
 const randomNumber = getRandom(10);
-console.log(randomNumber);
 
 //Funciones
 
@@ -19,17 +19,18 @@ function getRandom(max) {
 
 function getOptionComputer() {
   const optionPc = randomNumber;
+
   if (optionPc < 3) {
-    computer.textContent = "piedra";
-  } else if (optionPc >= 6) {
-    computer.textContent = "papel";
-  } else {
-    computer.textContent = "tjeras";
+    computerSelection = "piedra";
+  } else if (optionPc >= 3) {
+    computerSelection = "papel";
+  } else if (optionPc > 6) {
+    computerSelection = "tijeras";
   }
 }
 
 function compareOptionPlayer() {
-  const optionPlay = selectPlay.value;
+  const optionPlay = Number(selectPlay.value);
 
   if (optionPlay === randomNumber) {
     infoUser.textContent = "Empate";
@@ -38,9 +39,10 @@ function compareOptionPlayer() {
   } else if (optionPlay > randomNumber) {
     infoUser.textContent = "¡Has ganado!";
   }
+  console.log(infoUser);
+  counter++;
 }
-
-
+//Falta Funcion para contador
 
 function handleClickPlay(event) {
   event.preventDefault();
