@@ -2,7 +2,8 @@
 
 //Variables globales
 let counter = 1;
-let computerSelection = "";
+let playerValue = "";
+
 const playButton = document.querySelector(".js_button");
 const selectPlay = document.querySelector(".js_select_play");
 
@@ -17,37 +18,55 @@ function getRandom(max) {
   return Math.ceil(Math.random() * max);
 }
 
-function getOptionComputer() {
-  const optionPc = randomNumber;
+function getOptionComputer(randomNumber) {
+  let optionPc = "";
 
-  if (optionPc < 3) {
-    computerSelection = "piedra";
-  } else if (optionPc >= 3) {
-    computerSelection = "papel";
-  } else if (optionPc > 6) {
-    computerSelection = "tijeras";
+  if (randomNumber < 3) {
+    optionPc = "rock";
+  } else if (randomNumber >= 3) {
+    optionPc = "paper";
+  } else if (randomNumber > 6) {
+    optionPc = "scissors";
   }
+
+  return optionPc;
 }
 
-function compareOptionPlayer() {
-  const optionPlay = Number(selectPlay.value);
+function compareOptionPlayer(optionPc) {
+  playerValue = selectPlay.value;
 
-  if (optionPlay === randomNumber) {
-    infoUser.textContent = "Empate";
-  } else if (optionPlay < randomNumber) {
-    infoUser.textContent = "¡Has perdido!";
-  } else if (optionPlay > randomNumber) {
-    infoUser.textContent = "¡Has ganado!";
+  console.log(optionPc, playerValue);
+  if (optionPc === "rock" && playerValue === "rock") {
+    infoUser.innerHTML = "Empate";
+  } else if (optionPc === "rock" && playerValue === "scissors") {
+    infoUser.innerHTML = "¡Has perdido!";
+  } else if (optionPc === "rock" && playerValue === "paper") {
+    infoUser.innerHTML = "¡Has ganado!";
+  } else if (optionPc === "paper" && playerValue === "rock") {
+    infoUser.innerHTML = "¡Has perdido";
+  } else if (optionPc === "paper" && playerValue === "scissors") {
+    infoUser.innerHTML === "¡Has ganado!";
+  } else if (optionPc === "paper" && playerValue === "paper") {
+    infoUser.innerHTML = "Empate";
+  } else if (optionPc === "scissors" && playerValue === "rock") {
+    infoUser.innerHTML = "¡Has ganado";
+  } else if (optionPc === "scissors" && playerValue === "scissors") {
+    infoUser.innerHTML = "Empate";
+  } else if (optionPc === "scissors" && playerValue === "paper") {
+    infoUser.innerHTML = "Has perdido";
   }
-  console.log(infoUser);
+
   counter++;
 }
 //Falta Funcion para contador
 
 function handleClickPlay(event) {
   event.preventDefault();
-  getOptionComputer();
-  compareOptionPlayer();
+  let optionPc = getOptionComputer(randomNumber);
+
+ player.textContent = selectPlay.value;
+ computer.textContent = optionPc;
+ compareOptionPlayer(optionPc);
 }
 
 //Listeners
