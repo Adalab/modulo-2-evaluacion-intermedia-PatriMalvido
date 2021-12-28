@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Pacifico";
+}
+
+.image {
+  width: 120px;
+}
+
+.title {
+  font-size: 45px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(27, 17, 44);
+}
+.text {
+  font-size: 20px;
+  padding: 20px;
+  color: rgb(27, 17, 44);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.select_play {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border: none;
+  border-bottom: rgb(255, 255, 255, 0.322) solid 2px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 15px;
+  background-color: transparent;
+  color: rgb(15, 3, 87);
+  cursor: pointer;
+  font-family: "Pacifico", cursive;
+}
+.play_button {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background: rgb(79, 22, 143, 1);
+  background: linear-gradient(
+    0deg,
+    rgb(79, 22, 143) 0%,
+    rgb(166, 12, 180) 100%
+  );
+  border: none;
+}
+.play_button:hover {
+  background: rgb(119, 0, 255, 1);
+  background: linear-gradient(0deg, rgb(119, 0, 255) 0%, rgb(180, 2, 251) 100%);
+}
+
+.hidden {
+  display: none;
+}
+.reset_button {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-family: "Pacifico", cursive;
+  font-size: bold;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background: rgb(148, 83, 223);
+  background: linear-gradient(
+    0deg,
+    rgba(148, 83, 223, 1) 0%,
+    rgb(165, 118, 219) 100%
+  );
+  border: none;
+}
+.play_button:hover {
+  background: rgb(136, 59, 224);
+  background: linear-gradient(
+    0deg,
+    rgba(136, 59, 224, 1) 0%,
+    rgb(191, 156, 231) 100%
+  );
+}
+
+.let_play {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: rgba(194, 177, 255, 0.74);
+  color: rgb(39, 7, 75);
+
+  font-family: "Pacifico";
+  font-weight: normal;
+}
+.player_score {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.137);
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Pacifico", cursive;
+  color: rgb(39, 7, 75);
+}
+.computer_score {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.137);
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Pacifico", cursive;
+  color: rgb(39, 7, 75);
+}
+@media (min-width: 768px) {
+  .title {
+    border-bottom: rgba(255, 255, 255, 0.322) 2px solid;
+    padding: 10px 50px 10px 50px;
+  }
+}

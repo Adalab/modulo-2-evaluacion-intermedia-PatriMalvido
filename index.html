@@ -5,31 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Piedra Papel Tijera</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <main>
+    <main class="main">
+        <img class="image" src="./images/Daco_1278234.png" alt="image">
         <h1 class="title">Juego Piedra, papel y tijera</h1>
-        <h2>Introduce aqui tu jugada:</h2>
-        <form action="" class="controls">
-            <select class="js_select_play" name="play_selected" id="play_selected">
-                <option value="rock">Piedra</option>
-                <option value="paper">Papel</option>
-                <option value="scissors">Tijera</option>
-            </select>
-            <input class="play_button js_button" type="submit" value="Jugar">
-            <div>
-                <p class="js_infouser">Vamos a jugar!</p>
-                <p class="js_player">Jugador:</p>
-                <p class="js_computer">Computadora:</p>
+
+        <form class="form js_form">
+            <h3 class="text">Introduce aquí tu jugada</h3>
+            <div class="container">
+                <select class="select_play js_select_play" name="select" id="select">
+                    <option value="select">Seleccionada tu jugada</option>
+                    <option value="rock">Piedra</option>
+                    <option value="paper">Papel</option>
+                    <option value="scissors">Tijera</option>
+                </select>
+
+                <input class="play_button js_button" type="submit" value="Jugar">
+                <input class="reset_button hidden  js_reset_button" type="submit" value="Reset">
             </div>
+            <h2 class="let_play js_result">Vamos a jugar!</h2>
+            <h3 class="player_score js_player_score">Jugador:</h3>
+            <h3 class="computer_score js_computer_score">Computadora:</h3>
 
         </form>
-
-
-
 
     </main>
 
