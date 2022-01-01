@@ -1,6 +1,6 @@
 # Ejercicio de evaluación intermedia
 
-El ejercicio consiste en desarrollar el juego "Piedra ,Papel y Tijera" usando JavaScript donde un jugador es el usuario y el otro la computadora. En el juego ambos jugadores tienen que hacer diferentes jugadas de piedra, papel o tijeras. Solo tiene dos resultados posibles: un empate o una victoria para un jugador y una derrota para el otro jugador. 
+El ejercicio consiste en desarrollar el juego "Piedra ,Papel y Tijera" usando JavaScript donde un jugador es el usuario y el otro la computadora. En el juego ambos jugadores tienen que hacer diferentes jugadas de piedra, papel o tijeras. Solo tiene dos resultados posibles: un empate o una victoria para un jugador y una derrota para el otro jugador. Para probarlo y jugar con él pincha [aquí](http://beta.adalab.es/modulo-2-evaluacion-intermedia-PatriMalvido/)
 
 ![imagen de la app](images/mockup-2evaluacionintermedia.png)
 
